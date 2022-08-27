@@ -1,0 +1,22 @@
+{
+  "name": "padawan",
+  "version": "1.0.0",
+  "description": "Teste de estagio Frameworks",
+  "main": "app.js",
+  "author": "jeffersondrs <jeffersonduarte@id.uff.br>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.5.3",
+    "pug": "^3.0.2",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

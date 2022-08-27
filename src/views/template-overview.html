@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: cadetblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        border: black solid 1px;
+        width: 850px;
+        justify-content: space-between;
+      }
+      li {
+        margin: 5px;
+        background-color: rgba(0, 0, 0, 0.276);
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        list-style: none;
+        border: black solid 1px;
+      }
+    </style>
+    <title>Node Project Crud mongoDB</title>
+  </head>
+  <body>
+    <h1>Contas criadas</h1>
+
+    {%CARDUSER%}
+  </body>
+</html>
