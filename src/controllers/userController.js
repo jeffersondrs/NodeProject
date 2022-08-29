@@ -35,6 +35,8 @@ exports.createUser = async (req, res) => {
     const users = await features.query;
     const dataObj = JSON.stringify(users);
     fs.writeFileSync(`${__dirname}/../database/users.json`, dataObj);
+    const dataUser = JSON.stringify(newUser);
+    fs.writeFileSync(`${__dirname}/../database/user.json`, dataUser);
 
     res.status(201).json({
       status: "success",
