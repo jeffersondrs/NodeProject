@@ -8,40 +8,19 @@ const slugify = require('slugify');
 const replaceTemplate = require('./../modules/replaceTemp');
 
 const templateOverview = fs.readFileSync(`${__dirname}/./../views/template-overview.html`, 'utf-8');
-const templateUserCard = fs.readFileSync(`${__dirname}/./../views/template-user-card.html`, 'utf-8');
-const data = fs.readFileSync(`${__dirname}/./../database/users.json`, 'utf-8')
+const templateForm = fs.readFileSync(`${__dirname}/./../views/template-form.html`, 'utf-8');
+const templateUsers = fs.readFileSync(`${__dirname}/./../views/template-users.html`, 'utf-8');
+
+const data = fs.readFileSync(`${__dirname}/./../database/users.json`, 'utf-8');
 const dataObj = JSON.parse(data);
 
-
-exports.getUsers = async (req, res) => {
-    try {
-      // EXECUTE QUERY
-      const features = new APIFeatures(User.find(), req.query).filter().sort();
-  
-      const users = await features.query;
-  
-      // SEND RESPONSE
-      res.status(200).json({
-        status: "success",
-        results: users.length,
-        data: {
-          users: users,
-        }
-        
-      });
-    } catch (err) {
-      res.status(404).json({
-        status: "falha",
-        message: err.message,
-      });
-    }
-  };
-
 exports.replaceTemp = async (req, res) => {
-    const pathName = req.url;
-    const indexHtml = dataObj.map(el => replaceTemplate(templateUserCard, el)).join('');
-    const output = templateOverview.replace('{%CARDUSER%}', indexHtml)
-    res.end(output)
-    
-    // res.status(200).render('template-user-card');
+    res.end(templateOverview)
+}
+
+exports.replaceForm = async (req, res) => {
+  const pathName = req.url;
+  const indexHtml = dataObj.map(el => replaceTemplate(templateUsers, el)).join('');
+  const output = templateForm.replace('{%USER_CARDS%}', indexHtml)
+  res.end(output)
 }

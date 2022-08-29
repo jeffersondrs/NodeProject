@@ -20,8 +20,7 @@
       }
       .container {
         display: flex;
-        flex-direction: row;
-        width: 100%;
+        flex-direction: column;
       }
       ul {
         display: flex;
@@ -43,13 +42,7 @@
     <title>Node Project Crud mongoDB</title>
   </head>
   <body>
-    <h1>Cadastre sua conta para começar</h1>
-
-    <form action="/api/v1/user/form/user" method="POST">
-      <label for="name">Nome:</label>
-      <input type="text" name="name" placeholder="Digite seu nome">
-      <input type="email" name="email" placeholder="Digite seu Email">
-      <input type="submit" value="Cadastrar">
-  </form>
+    {%USER_CARDS%}
+    <button><a href="/api/v1/users">Cadastrar novamente</a></button>
   </body>
 </html>
