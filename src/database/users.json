@@ -1,109 +1,58 @@
-[{
-  "_id": {
-    "$oid": "6308e259701765c17a383c3d"
-  },
-  "name": "Jefferson Duarte Ramos Dos Santos",
-  "email": "jeffersonduarte@id.uff.br",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661526487067"
+[
+    {
+        "_id": "63097e94ba2e0ada954313d5",
+        "name": "Corey Todd Taylor",
+        "email": "eigthslipknot@gmail.com",
+        "createdAt": "2022-08-27T01:49:02.338Z",
+        "__v": 0
+    },
+    {
+        "_id": "63097eafba2e0ada954313d7",
+        "name": "Kurt Cobain",
+        "email": "grungenirvana@gmail.com",
+        "createdAt": "2022-08-27T01:49:02.338Z",
+        "__v": 0
+    },
+    {
+        "_id": "63097ec5ba2e0ada954313d9",
+        "name": "Mike Thompson",
+        "email": "sevenslipknot@gmail.com",
+        "createdAt": "2022-08-27T01:49:02.338Z",
+        "__v": 0
+    },
+    {
+        "_id": "63097edeba2e0ada954313db",
+        "name": "Marcelo Falcão",
+        "email": "orappa@gmail.com",
+        "createdAt": "2022-08-27T01:49:02.338Z",
+        "__v": 0
+    },
+    {
+        "_id": "63093d816ba9e191b23c8088",
+        "name": "Marcelo D2",
+        "email": "planethemp@gmail.com",
+        "createdAt": "2022-08-26T21:38:07.272Z",
+        "__v": 0
+    },
+    {
+        "_id": "6309321ea202d4c854c4d77d",
+        "name": "Solimar Beatriz",
+        "email": "solimoraes@gmail.com",
+        "createdAt": "2022-08-26T20:50:38.602Z",
+        "__v": 0
+    },
+    {
+        "_id": "6308e4566a4bac750d561913",
+        "name": "Rafaela Moraes C. Duarte",
+        "email": "rafa_2015@gmail.com",
+        "createdAt": "2022-08-26T15:17:52.733Z",
+        "__v": 0
+    },
+    {
+        "_id": "6308e259701765c17a383c3d",
+        "name": "Jefferson Duarte Ramos Dos Santos",
+        "email": "jeffersonduarte@id.uff.br",
+        "createdAt": "2022-08-26T15:08:07.067Z",
+        "__v": 0
     }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6308e4566a4bac750d561913"
-  },
-  "name": "Rafaela Duarte",
-  "email": "rafa_2015@gmail.com",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661527072733"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "63093d816ba9e191b23c8088"
-  },
-  "name": "Marcelo D2",
-  "email": "planethemp@gmail.com",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661549887272"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "630972a42ac283c42d79994e"
-  },
-  "name": "Marcelo Camelo",
-  "email": "loshermanos@gmail.com",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661563517720"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "63097e94ba2e0ada954313d5"
-  },
-  "name": "Corey Todd Taylor",
-  "email": "eigthslipknot@gmail.com",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661564942338"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "63097eafba2e0ada954313d7"
-  },
-  "name": "Kurt Cobain",
-  "email": "grungenirvana@gmail.com",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661564942338"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "63097ec5ba2e0ada954313d9"
-  },
-  "name": "Mike Thompson",
-  "email": "sevenslipknot@gmail.com",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661564942338"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "63097edeba2e0ada954313db"
-  },
-  "name": "Marcelo Falcão",
-  "email": "orappa@gmail.com",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661564942338"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6309809019e3f29d9e8ef7c9"
-  },
-  "name": "Craig Jones",
-  "email": "slipknot@gmail.com",
-  "createdAt": {
-    "$date": {
-      "$numberLong": "1661567046117"
-    }
-  },
-  "__v": 0
-}]
+]
