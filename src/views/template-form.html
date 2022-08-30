@@ -11,16 +11,140 @@
         box-sizing: border-box;
       }
       body {
-        background-color: cadetblue;
+        background: #2e013b;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        height: 100vh;
+        justify-content: center;
+        font-family: "Roboto", sans-serif;
       }
+
+      h1 {
+        box-shadow: 0.2em 0 0 #ffffff;
+        margin: 2rem 0.5rem;
+        width: 28ch;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: #fff;
+        white-space: nowrap;
+        border-radius: 5px;
+        animation: caret 0.5s step-end infinite alternate,
+          type 1.2s steps(24, end) 1;
+      }
+      @keyframes type {
+        0% {
+          width: 0;
+        }
+      }
+
+      @keyframes caret {
+        50% {
+          box-shadow: 0.6em 0 0 transparent;
+        }
+      }
+      @use postcss-preset-env {
+        stage: 0;
+        autoprefixer: {
+          grid: true;
+        }
+        browsers: [ "last 1 chrome versions", "last 1 firefox versions",
+          "last 1 edge versions", "last 1 opera versions",
+          "last 1 safari versions" ];
+      }
+      .navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        flex-wrap: wrap;
+        z-index: 1;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        margin: 0px auto 0;
+        width: 310px;
+        height: 30px;
+        background: #000483;
+        align-items: center;
+        border-radius: 8px;
+        font-size: 0;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+      }
+      nav a {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 30px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        text-align: center;
+      }
+      nav .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        background: #1abc9c;
+        border-radius: 8px;
+        transition: all 0.5s ease-in-out 0s;
+      }
+      nav a:nth-child(1) {
+        width: 100px;
+      }
+      nav .start-home,
+      a:nth-child(1):hover ~ .animation {
+        width: 100px;
+        left: 0;
+      }
+      nav a:nth-child(2) {
+        width: 110px;
+      }
+      nav a:nth-child(2):hover ~ .animation {
+        width: 110px;
+        left: 100px;
+      }
+      nav a:nth-child(3) {
+        width: 100px;
+      }
+      nav a:nth-child(3):hover ~ .animation {
+        width: 100px;
+        left: 210px;
+      }
+      nav a:nth-child(4) {
+        width: 160px;
+      }
+      nav a:nth-child(4):hover ~ .animation {
+        width: 160px;
+        left: 310px;
+      }
+      nav a:nth-child(5) {
+        width: 120px;
+      }
+      nav a:nth-child(5):hover ~ .animation {
+        width: 120px;
+        left: 470px;
+      }
+
       .container {
         display: flex;
+        width: 100%;
+        background-color: blueviolet;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       ul {
         display: flex;
@@ -38,11 +162,36 @@
         list-style: none;
         border: black solid 1px;
       }
+      .btn {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        margin: 3px;
+        padding: 2px;
+        border-radius: 10px;
+      }
+      .btn a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        height: 35px;
+        width: 150px;
+      }
+      p{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+      }
     </style>
+
     <title>Node Project Crud mongoDB</title>
   </head>
   <body>
     {%USER_CARDS%}
-    <button><a href="/api/v1/user/index">Cadastrar novamente</a></button>
+    <button class="btn">
+      <a href="/api/v1/user/index">Cadastrar novamente</a>
+    </button>
   </body>
 </html>

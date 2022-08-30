@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(express.json());
 app.use("/api/v1/user", userRoute);
-app.get('/api/v1/user/index', userRoute).post('/api/v1/users/form', userRoute);
+app.use('/api/v1/user', userRoute).post('/api/v1/user', userRoute);
 
 
-module.exports = app; 
+module.exports = app;   

@@ -27,22 +27,27 @@ exports.getAllUsers = async (req, res) => {
   }
 };
 
+
 exports.createUser = async (req, res) => {
   try {
     const newUser = await User.create(req.body);
+
     const features = new APIFeatures(User.find(), req.query).filter().sort();
-
     const users = await features.query;
-    const dataObj = JSON.stringify(users);
-    fs.writeFileSync(`${__dirname}/../database/users.json`, dataObj);
-    const dataUser = JSON.stringify(newUser);
-    fs.writeFileSync(`${__dirname}/../database/user.json`, dataUser);
 
-    res.status(201).json({
-      status: "success",
-      data: { user: newUser },
-    });
-    console.log(newUser);
+    const dataObj = JSON.stringify(users);
+
+    const arrayUser = [newUser];
+
+    const dataUser = JSON.stringify(arrayUser);
+   
+    fs.writeFileSync(`${__dirname}/../database/users.json`, dataObj);
+    fs.writeFileSync(`${__dirname}/../database/user.json`, dataUser);
+     res.status(201).json({
+      status: 'success',
+      message: 'cliente cliado com sucesso',
+      data: { newUser }
+    })
   } catch (err) {
     res.status(400).json({
       status: "fail",
@@ -95,4 +100,3 @@ exports.updateUser = async (req, res) => {
     });
   }
 };
-
