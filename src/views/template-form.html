@@ -140,9 +140,9 @@
 
       .container {
         display: flex;
-        width: 100%;
+        width: 90%;
         background-color: blueviolet;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
       }
@@ -178,17 +178,61 @@
         height: 35px;
         width: 150px;
       }
-      p{
+      p {
         font-size: 2rem;
         text-align: center;
         font-weight: bold;
         color: white;
+      }
+      #id {
+        width: 80%;
+        height: 100%;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        background-color: rgba(112, 128, 144, 0.335);
+        text-align: center;
+        padding: 3px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      #name {
+        width: 80%;
+        height: 100%;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        background-color: rgba(112, 128, 144, 0.335);
+        text-align: center;
+        padding: 3px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      #email {
+        width: 80%;
+        height: 100%;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        background-color: rgba(112, 128, 144, 0.335);
+        text-align: center;
+        padding: 3px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
       }
     </style>
 
     <title>Node Project Crud mongoDB</title>
   </head>
   <body>
+    <div class="navBar">
+      <nav>
+        <a href="/api/v1/user/index">Home</a>
+        <a href="/api/v1/user/post/user">User</a>
+        <a href="/api/v1/user/form/users">Usuários</a>
+        <div class="animation start-home"></div>
+      </nav>
+    </div>
     {%USER_CARDS%}
     <button class="btn">
       <a href="/api/v1/user/index">Cadastrar novamente</a>

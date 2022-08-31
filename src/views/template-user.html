@@ -140,7 +140,8 @@
 
       .container {
         display: flex;
-        width: 100%;
+        width: 500px;
+        height: auto;
         background-color: blueviolet;
         flex-direction: column;
         align-items: center;
@@ -184,10 +185,54 @@
         font-weight: bold;
         color: white;
       }
+      #id{
+        width: 80%;
+        height: 100%;
+        color: white;
+        font-weight: 500;
+        font-size: 1.5rem;
+        background-color: rgba(112, 128, 144, 0.335);
+        text-align: center;
+        padding: 3px;
+        margin: 3px;
+
+      }
+      #name{
+        width: 80%;
+        height: 100%;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        background-color:rgba(112, 128, 144, 0.335);
+        text-align: center;
+        padding: 3px;
+        margin: 3px;
+
+      }
+      #email{
+        width: 80%;
+        height: 100%;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        background-color:rgba(112, 128, 144, 0.335);
+        text-align: center;
+        padding: 3px;
+        margin: 3px;
+
+      }
     </style>
     <title>Node Project Crud mongoDB</title>
   </head>
   <body>
+    <div class="navBar">
+      <nav>
+        <a href="/api/v1/user/index">Home</a>
+        <a href="/api/v1/user/post/user">User</a>
+        <a href="/api/v1/user/form/users">Usuários</a>
+        <div class="animation start-home"></div>
+      </nav>
+    </div>
     <p class="title">Obrigao por se cadastrar</p>
     {%USER_CARD%}
   </form>
